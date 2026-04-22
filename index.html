@@ -8,12 +8,22 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0f172a;
       color: white;
+
+      /* Animated Sky Gradient */
+      background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #020617);
+      background-size: 400% 400%;
+      animation: skyMove 12s ease infinite;
+    }
+
+    @keyframes skyMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.9);
       padding: 20px;
       text-align: center;
     }
@@ -24,7 +34,7 @@
     }
 
     nav {
-      background: #020617;
+      background: rgba(2, 6, 23, 0.9);
       padding: 10px;
       text-align: center;
     }
@@ -45,22 +55,44 @@
       padding: 40px;
     }
 
-    /* Minecraft-style image */
-    .hero img {
-      width: 180px;
-      image-rendering: pixelated;
-      border: 4px solid #22c55e;
-      box-shadow: 0 0 15px #22c55e;
-      border-radius: 8px;
+    /* Profile Picture */
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 0 20px #38bdf8;
+      object-fit: cover;
       margin-bottom: 15px;
     }
 
-    .beware-text {
-      font-family: monospace;
-      color: #22c55e;
-      text-shadow: 2px 2px #000;
-      font-size: 28px;
-      margin-bottom: 10px;
+    /* Bedwars Image */
+    .hero img.bed {
+      width: 200px;
+      image-rendering: pixelated;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 0 20px #38bdf8;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* TikTok Button */
+    .tiktok-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #25F4EE;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .tiktok-btn:hover {
+      background: #fe2c55;
+      color: white;
+      transform: scale(1.05);
     }
 
     .section {
@@ -70,7 +102,7 @@
     }
 
     .card {
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.9);
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
@@ -79,7 +111,7 @@
     footer {
       text-align: center;
       padding: 20px;
-      background: #020617;
+      background: rgba(2, 6, 23, 0.9);
       margin-top: 30px;
     }
   </style>
@@ -100,22 +132,28 @@
 
 <section class="hero">
 
-  <!-- Minecraft Beware Image -->
-  <img src="https://i.imgur.com/8Km9tLL.png" alt="Beware Minecraft Logo">
+  <!-- PROFILE PIC (your TikTok image) -->
+  <img class="profile-pic" src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/97759359adb132ac6394b742c655a60c~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=5c2901d0&x-expires=1777071600&x-signature=Nrybj8Kn1z39%2FSWfCHeyKaLxnOk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5" alt="Jayeio Profile">
 
-  <!-- Minecraft Style Text -->
-  <div class="beware-text">⚠ BEWARE ⚠</div>
+  <!-- Bedwars Image -->
+  <img class="bed" src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5e/Bed.png" alt="Minecraft Bed">
 
   <h2>Welcome to the Fan Page</h2>
-  <p>Follow Jayeio for awesome gameplay and streams!</p>
+  <p>Watch Jayeio dominate in Minecraft Bedwars!</p>
+
+  <!-- TikTok Button -->
+  <a href="https://www.tiktok.com/@jayeiolive" target="_blank" class="tiktok-btn">
+    Watch on TikTok
+  </a>
+
 </section>
 
 <section id="about" class="section">
   <div class="card">
     <h2>About</h2>
     <p>
-      Jayeio is a gaming streamer known for playing competitive Minecraft.
-      He streams live, interacts with viewers, and creates fun content.
+      Jayeio is a gaming streamer who plays Minecraft Bedwars.
+      He is known for clutch plays, fast reactions, and entertaining streams.
     </p>
   </div>
 </section>
@@ -124,10 +162,10 @@
   <div class="card">
     <h2>Content</h2>
     <ul>
-      <li>🎮 Minecraft gameplay</li>
-      <li>🔥 Live challenges</li>
+      <li>🎮 Minecraft Bedwars gameplay</li>
+      <li>🔥 Clutch wins</li>
       <li>😂 Funny moments</li>
-      <li>💬 Viewer interactions</li>
+      <li>💬 Viewer interaction</li>
     </ul>
   </div>
 </section>
@@ -135,8 +173,12 @@
 <section id="live" class="section">
   <div class="card">
     <h2>Live Streams</h2>
-    <p>Watch Jayeio live on TikTok and other platforms!</p>
-    <p><b>Tip:</b> Search "Jayeio" on TikTok LIVE to find current streams.</p>
+    <p>Click below to watch Jayeio live:</p>
+
+    <a href="https://www.tiktok.com/@jayeiolive" target="_blank" class="tiktok-btn">
+      Go to TikTok Live
+    </a>
+
   </div>
 </section>
 
