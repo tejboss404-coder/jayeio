@@ -10,7 +10,7 @@
       font-family: Arial, sans-serif;
       color: white;
 
-      /* Animated Sky Gradient */
+      /* Animated sky */
       background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #020617);
       background-size: 400% 400%;
       animation: skyMove 12s ease infinite;
@@ -55,7 +55,6 @@
       padding: 40px;
     }
 
-    /* Profile Picture */
     .profile-pic {
       width: 160px;
       height: 160px;
@@ -66,8 +65,7 @@
       margin-bottom: 15px;
     }
 
-    /* Bedwars Image */
-    .hero img.bed {
+    .bed {
       width: 200px;
       image-rendering: pixelated;
       border: 4px solid #38bdf8;
@@ -76,7 +74,6 @@
       margin-bottom: 15px;
     }
 
-    /* TikTok Button */
     .tiktok-btn {
       display: inline-block;
       margin-top: 15px;
@@ -132,16 +129,15 @@
 
 <section class="hero">
 
-  <!-- PROFILE PIC (your TikTok image) -->
-  <img class="profile-pic" src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/97759359adb132ac6394b742c655a60c~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=5c2901d0&x-expires=1777071600&x-signature=Nrybj8Kn1z39%2FSWfCHeyKaLxnOk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5" alt="Jayeio Profile">
+  <!-- PROFILE PIC -->
+  <img class="profile-pic" src="profile.jpg" alt="" onerror="this.remove()">
 
-  <!-- Bedwars Image -->
-  <img class="bed" src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5e/Bed.png" alt="Minecraft Bed">
+  <!-- BED IMAGE -->
+  <img class="bed" src="bed.png" alt="" onerror="this.remove()">
 
   <h2>Welcome to the Fan Page</h2>
   <p>Watch Jayeio dominate in Minecraft Bedwars!</p>
 
-  <!-- TikTok Button -->
   <a href="https://www.tiktok.com/@jayeiolive" target="_blank" class="tiktok-btn">
     Watch on TikTok
   </a>
@@ -173,12 +169,9 @@
 <section id="live" class="section">
   <div class="card">
     <h2>Live Streams</h2>
-    <p>Click below to watch Jayeio live:</p>
-
     <a href="https://www.tiktok.com/@jayeiolive" target="_blank" class="tiktok-btn">
       Go to TikTok Live
     </a>
-
   </div>
 </section>
 
